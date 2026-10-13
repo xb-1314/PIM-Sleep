@@ -109,30 +109,7 @@ Disorder classification uses **reference sleep stages**, stage-wise PCA/RF model
 
 The current spindle entry uses **35 CUITS/CLAS subjects**, C3-A1 signals, and matched `Base_SLPxxx_morphology.npz` / `Base_SLPxxx_Spindle.txt` files. Its defaults are **2 training epochs and IoU 0.6**. For the manuscript's primary metric, set `spindle_primary_iou_threshold=0.3` and include `0.3` in `spindle_report_iou_thresholds`. Other spindle datasets require their corresponding loader configuration.
 
-## Manuscript Results
-
-| Dataset | Staging ACC (%) | Spindle F1@IoU 0.3 (%) |
-|---|---:|---:|
-| DREAMS | 86.95 | 78.87 |
-| CUITS | 88.31 | 85.06 |
-| BP-SleepX | 89.18 | 78.77 |
-
-CAP + DREAMS HC disorder classification: **84.29 ± 1.78% ACC**, **93.90 ± 0.47% macro-AUROC**, and **84.75 ± 1.83% macro-F1**.
-
-These are manuscript results. Reproduction requires the corresponding data, checkpoints, and experiment configurations; the current development defaults do not reproduce every reported experiment.
-
-## Citation
-
-```bibtex
-@unpublished{xu_pim_sleep,
-  title  = {{PIM-Sleep}: A Physiology-Informed Sleep Foundation Model for Tasks Across Multiple Timescales},
-  author = {Xu, Bo and Zhang, Song and Pan, Leyang and Zhang, Haokai and Gao, Dongrui and Xie, Jiaxin and Ying, Shaofei},
-  note   = {Manuscript}
-}
-```
-
 ## Acknowledgments
 
 Built with [PyTorch](https://pytorch.org/), [MNE-Python](https://mne.tools/), [YASA](https://github.com/raphaelvallat/yasa), and [scikit-learn](https://scikit-learn.org/).
 
-**Contact:** Shaofei Ying — [yingshaofei@uestc.edu.cn](mailto:yingshaofei@uestc.edu.cn).
