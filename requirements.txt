@@ -1,0 +1,24 @@
+# PIM-Sleep: preprocessing, training, evaluation, and visualization.
+# Recommended interpreter: Python 3.11.
+# Install the appropriate CPU/CUDA PyTorch build for your machine.
+torch>=2.4,<3.0
+
+# Numerical computing and evaluation.
+numpy>=1.26.4,<2.0
+scipy>=1.11.4,<2.0
+pandas>=2.2,<3.0
+scikit-learn>=1.4,<2.0
+
+# PSG loading and morphological event detection.
+mne>=1.7,<2.0
+# 0.7.0 supports Hypnogram-based event detection and the existing
+# SleepStaging.predict_proba() calls. YASA 0.8 removes predict_proba().
+yasa==0.7.0
+
+# Progress reporting and figures, including the staging UMAP plots.
+tqdm>=4.66,<5.0
+matplotlib>=3.8,<4.0
+umap-learn>=0.5.7,<0.6
+
+# morphology_detector_yasa.py is a local project module. Keep it beside
+# the preprocessing scripts; it is not a package to install with pip.
